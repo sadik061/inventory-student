@@ -18,8 +18,8 @@
                     <span>Contects</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="calendar.html">Supplier</a></li>
-                    <li><a  href="gallery.html">Customer</a></li>
+                    <li><a  href="supplier.php">Supplier</a></li>
+                    <li><a  href="Customer.php">Customer</a></li>
                 </ul>
             </li>
 

@@ -2240,7 +2240,29 @@ label {
     min-height: 900px;
 }
 .black-bg{
-    background: #68dff0;
+    background: #424a5d;
 }
-
-
+ul.top-menu > li > .logout {
+    color: #000000;
+    border: 1px solid #0a0b0b !important;
+    background: #ffd777;
+    margin-top: 15px;
+}
+.nav-tabs > li > a {
+    border-color: #424a5d #424a5d #ffffff;
+}
+form{
+    padding-bottom: 26px;
+}
+.wrapper {
+    min-height: 643px;
+}
+ul.top-menu > li > a {
+    color: #ffd777;
+    border: 1px solid #ffd777 !important;
+}
+.btn-primary {
+    color: #ffd777;
+    background-color: #424a5d;
+    border-color: #424a5d;
+}
