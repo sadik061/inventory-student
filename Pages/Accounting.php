@@ -94,7 +94,7 @@
                                         <tbody>
                                         <tr>
                                             <td><a href="basic_table.html#">Company Ltd</a></td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                            <td class="hidden-phone">Some money dolor</td>
                                             <td>12000.00$ </td>
                                             <td><span class="label label-info label-mini">Due</span></td>
                                             <td>
