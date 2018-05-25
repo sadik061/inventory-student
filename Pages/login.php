@@ -11,13 +11,12 @@ MAIN CONTENT
         <form class="form-login" method="post" role="form"  action="../Api/Check_Login.php">
             <h2 class="form-login-heading">sign in now</h2>
             <div class="login-wrap">
-                <input type="email" class="form-control" placeholder="E-mail" name="email"  autofocus>
+                <input  class="form-control" placeholder="E-mail" name="email" type="email"  autofocus>
                 <br>
-                <input type="password" class="form-control" placeholder="Password" name="password" >
+                <input  class="form-control" placeholder="Password" name="password" type="password" >
                 <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-
 		                </span>
                 </label>
                 <button class="btn btn-theme btn-block" href="index.html" name="login" value="login" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
@@ -47,7 +46,7 @@ MAIN CONTENT
                         </div>
                         <div class="modal-body">
                             <p>Enter your e-mail address below to reset your password.</p>
-                            <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                            <input type="text" name="rec_email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
                         </div>
                         <div class="modal-footer">

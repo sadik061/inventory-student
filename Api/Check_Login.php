@@ -13,7 +13,7 @@ class InsertDetails{
         $response = array();
         $Email  = $_POST['email'];
         $Password  = $_POST['password'];
-        echo $Email." ".$Password;
+        //echo $Email." ".$Password;
         try{
             if(!empty($Email) && !empty($Password))
             {
@@ -29,13 +29,11 @@ class InsertDetails{
                         $_SESSION['PhoneNo']=$data['user_PhoneNo'];
                         $_SESSION['Email']=$data['user_Email'];
                         $_SESSION['User_Type']=$data['user_Role'];
-
-
                     }
                     $_SESSION['loggedIn']=true;
 
 
-                    echo '<script type="text/javascript"> window.open("../pages/dashboard.php","_self");</script>';            //  On Successful Login redirects to home.php
+                    echo '<script type="text/javascript"> window.open("../Pages/","_self");</script>';            //  On Successful Login redirects to home.php
                     die();
                 }
                 else{
@@ -46,7 +44,7 @@ class InsertDetails{
             }
             else{
                 echo '<script type="text/javascript">alert("Please Fill Email And Password...");</script>';
-                //echo '<script type="text/javascript"> window.open("../index.php","_self");</script>';
+                echo '<script type="text/javascript"> window.open("../index.php","_self");</script>';
                 die();
             }
 
