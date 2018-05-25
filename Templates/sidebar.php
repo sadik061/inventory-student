@@ -53,7 +53,7 @@
                     <span>Seles</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="form_component.html">Sale order</a></li>
+                    <li><a  href="../Pages/SalesOrder.php">Sale order</a></li>
                     <li><a  href="form_component.html">Invoices</a></li>
                     <li><a  href="form_component.html">Shipping</a></li>
                 </ul>
