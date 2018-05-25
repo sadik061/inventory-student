@@ -1,5 +1,7 @@
 <?php include '../Templates/Header.php'; ?>
 <body>
+<!-- for calling ajax to handle API -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <section id="container" >
     <?php include '../Templates/navbar.php' ?>
     <?php include '../Templates/sidebar.php' ?>
@@ -50,88 +52,66 @@
 
 
                             <div role="tabpanel" class="tab-pane" id="list"><div class="content-panel">
-                                    <table class="table table-striped table-advance table-hover">
-                                        <h4><i class="fa fa-angle-right"></i> All Suppliers</h4>
+                                    <table class="table table-striped table-advance table-hover" id="suppliers">
+                                        <h4><i class="fa fa-angle-right"></i> All Customer</h4>
                                         <hr>
-                                        <thead>
-                                        <tr>
-                                            <th><i class="fa fa-bullhorn"></i> Company</th>
-                                            <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
-                                            <th><i class="fa fa-bookmark"></i> Profit</th>
-                                            <th><i class=" fa fa-edit"></i> Status</th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td><a href="basic_table.html#">Company Ltd</a></td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                            <td>12000.00$ </td>
-                                            <td><span class="label label-info label-mini">Due</span></td>
-                                            <td>
-                                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="basic_table.html#">
-                                                    Dashgum co
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                            <td>17900.00$ </td>
-                                            <td><span class="label label-warning label-mini">Due</span></td>
-                                            <td>
-                                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="basic_table.html#">
-                                                    Another Co
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                            <td>14400.00$ </td>
-                                            <td><span class="label label-success label-mini">Paid</span></td>
-                                            <td>
-                                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="basic_table.html#">
-                                                    Dashgum ext
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                            <td>22000.50$ </td>
-                                            <td><span class="label label-success label-mini">Paid</span></td>
-                                            <td>
-                                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="basic_table.html#">Total Ltd</a></td>
-                                            <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                            <td>12120.00$ </td>
-                                            <td><span class="label label-warning label-mini">Due</span></td>
-                                            <td>
-                                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+
                                     </table>
+                                    <script>
+                                        //alert("loaded");
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '../Api/get_customer.php',
+                                            async: false,
+                                            data: {
+                                            },
+                                            error: function (ts) {
+                                                alert(ts.responseText);
+                                            },
+                                            success: function (data) {
+                                                //when found names sending them in datalist for suggetions
+                                                //alert(data);
+                                                var table = document.getElementById("suppliers");
+                                                var row = table.insertRow(0);
+                                                var cell1 = row.insertCell(0);
+                                                var cell2 = row.insertCell(1);
+                                                var cell3 = row.insertCell(2);
+                                                var cell4 = row.insertCell(3);
+                                                var cell5 = row.insertCell(4);
+                                                cell1.innerHTML = "Customer Name";
+                                                cell2.innerHTML = "Customer Address";
+                                                cell3.innerHTML ="Customer Mobile No";
+                                                cell4.innerHTML = "Customer Added By";
+                                                cell5.innerHTML = "Operation";
+                                                var obj = JSON.parse(data);
+                                                var datas=obj.customer_data;
+                                                var i=1;
+                                                for (var key in datas) {
+                                                    if (datas.hasOwnProperty(key)) {
+                                                        //alert(datas[key].TrainName);
+                                                        var row = table.insertRow(i);
+                                                        var cell1 = row.insertCell(0);
+                                                        var cell2 = row.insertCell(1);
+                                                        var cell3 = row.insertCell(2);
+                                                        var cell4 = row.insertCell(3);
+                                                        var cell5 = row.insertCell(4);
+
+                                                        cell1.innerHTML = ""+datas[key].customer_Name;
+                                                        cell2.innerHTML = ""+datas[key].customer_address;
+                                                        cell3.innerHTML = ""+datas[key].customer_PhoneNo;
+                                                        cell4.innerHTML = ""+datas[key].customer_Entry_By;
+                                                        cell5.innerHTML = "<button class=\"btn btn-success btn-xs\"><i class=\"fa fa-check\"></i></button>\n" +
+                                                            "                                                <button class=\"btn btn-primary btn-xs\"><i class=\"fa fa-pencil\"></i></button>\n" +
+                                                            "                                                <button class=\"btn btn-danger btn-xs\"><i class=\"fa fa-trash-o \"></i></button>\n" +
+                                                            "                                            ";
+
+                                                        i++;
+                                                    }
+                                                }
+
+                                            }
+                                        });
+                                    </script>
                                 </div><!-- /content-panel --></div></div>
 
                     </div>
