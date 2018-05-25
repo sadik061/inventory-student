@@ -85,6 +85,7 @@
                                                 cell5.innerHTML = "Operation";
                                                 var obj = JSON.parse(data);
                                                 var datas=obj.customer_data;
+
                                                 var i=1;
                                                 for (var key in datas) {
                                                     if (datas.hasOwnProperty(key)) {
