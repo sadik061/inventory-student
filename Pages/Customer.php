@@ -101,10 +101,11 @@
                                                         cell2.innerHTML = ""+datas[key].customer_address;
                                                         cell3.innerHTML = ""+datas[key].customer_PhoneNo;
                                                         cell4.innerHTML = ""+datas[key].customer_Entry_By;
-                                                        cell5.innerHTML = "<button class=\"btn btn-success btn-xs\"><i class=\"fa fa-check\"></i></button>\n" +
-                                                            "                                                <button class=\"btn btn-primary btn-xs\"><i class=\"fa fa-pencil\"></i></button>\n" +
-                                                            "                                                <button class=\"btn btn-danger btn-xs\"><i class=\"fa fa-trash-o \"></i></button>\n" +
-                                                            "                                            ";
+                                                        cell5.innerHTML = "" +
+                                                            "<button class=\"btn btn-success btn-xs\"><i class=\"fa fa-check\"></i></button>\n" +
+                                                            "<button class=\"btn btn-primary btn-xs\"><i class=\"fa fa-pencil\"></i></button>\n" +
+                                                            "<button class=\"btn btn-danger btn-xs\"><i class=\"fa fa-trash-o \"></i></button>\n"+
+                                                                        "";
 
                                                         i++;
                                                     }
