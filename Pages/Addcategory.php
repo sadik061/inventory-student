@@ -28,57 +28,64 @@
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="home"><div class="content-panel"><form>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail4">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Password</label>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputAddress">Address</label>
-                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputAddress2">Address 2</label>
-                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCity">City</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputZip">Zip</label>
-                                            <input type="text" class="form-control" id="inputZip">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                                            <label class="form-check-label" for="gridCheck">
-                                                Check me out
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Sign in</button>
-                                </form>
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="content-panel">
+
+                                    <div class="row mt">
+                                        <div class="col-lg-12">
+                                            <div class="form-panel">
+                                                <h3>New Category</h3>
+                                                <small>Please provide details of this product.</small>
+                                                <form class="form-horizontal style-form" method="get">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-sm-2 control-label">Customer name</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-sm-2 control-label">Sales order</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-sm-2 control-label">Sales order Date</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <label class="col-sm-2 col-sm-2 control-label">Expected Shipment Date</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-sm-2 control-label">Warehouse Name</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-sm-2 control-label">Delivery Method</label>
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                                <button type="submit" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </div><!-- col-lg-12-->
+                                    </div><!-- /row -->
+
+
+
+                                </div>
                             </div>
-                        </div>
 
 
-                            <div role="tabpanel" class="tab-pane" id="subcategory"><div class="content-panel"><form>
+                            <div role="tabpanel" class="tab-pane" id="subcategory"><div class="content-panel">
+                                    <form>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4">Email</label>
@@ -125,7 +132,7 @@
                                     <button type="submit" class="btn btn-primary">Sign in</button>
                                 </form>
                             </div>
-                        </div>
+                            </div>
 
 
 

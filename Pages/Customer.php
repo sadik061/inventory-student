@@ -35,17 +35,47 @@
                                                 <label for="name">Name</label>
                                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                                             </div>
+
+
                                             <div class="form-group col-md-6">
-                                                <label for="mobile">Mobile</label>
-                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile No.">
+                                                <label for="mobile">Title</label>
+                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="e.g. Owner, Stock buyer">
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-12">
-                                            <label for="address">Address</label>
-                                            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="address">Email</label>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Email">
+                                            </div>
+                                            <div class="form-group col-md-6">
+
+                                                <label for="exampleFormControlTextarea1">Note</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="address">Phone Number</label>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Phone number">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="address">Mobile</label>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Mobile number">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+                                            </div>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add</button>
+                                        <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add Contact</button>
                                     </form>
                                 </div>
                             </div>
