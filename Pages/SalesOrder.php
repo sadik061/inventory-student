@@ -113,6 +113,10 @@
                                     <p class="form-control-static">00.00</p>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-6 col-sm-6 control-label" for="comment">Comment:</label>
+                                <textarea class="form-control col-sm-10 col-sm-10 control-label" rows="5" id="comment"></textarea>
+                            </div>
                             <button type="submit" class="btn btn-primary">Order</button>
                         </form>
 

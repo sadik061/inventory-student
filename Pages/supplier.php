@@ -70,10 +70,10 @@
                                                 <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="address">Address</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+
                                             </div>
                                         </div>
+
 
                                         <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add Contact</button>
                                     </form>
