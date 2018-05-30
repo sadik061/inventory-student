@@ -2266,3 +2266,17 @@ ul.top-menu > li > a {
     background-color: #424a5d;
     border-color: #424a5d;
 }
+
+.image-upload {
+    position: relative;
+    border: 1px dashed #D6D6D6;
+    padding: 8px 6px 7px;
+    border-radius: 4px;
+    text-align: center;
+    width: 178px;
+    float: right;
+    margin-right: 26%;
+
+}
+
+

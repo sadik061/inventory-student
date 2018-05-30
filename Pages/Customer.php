@@ -29,53 +29,73 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="Addnew">
                                 <div class="content-panel">
-                                    <form method="post" role="form"  action="../Api/add_customer.php">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="name">Name</label>
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                                            </div>
+                                    <form class="form-horizontal" method="get">
+                                        <div class="col-md-12" style="background-color:  #fbfafa;padding-top:  20px; padding-bottom: 15px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Name*</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" required>
+                                                    </div>
 
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Company Name*</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Contact Title</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Email*</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Contact Type*</label>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
 
-                                            <div class="form-group col-md-6">
-                                                <label for="mobile">Title</label>
-                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="e.g. Owner, Stock buyer">
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="address">Email</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Email">
-                                            </div>
-                                            <div class="form-group col-md-6">
-
-                                                <label for="exampleFormControlTextarea1">Note</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="address">Phone Number</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Phone number">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="address">Mobile</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Mobile number">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="address">Address</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="address">Address</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+                                        <div class="col-md-12" style="border: 1px; border: #0a0b0b;     padding-top: 20px;">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label" style="width: 9%;">Mobile</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <label class="col-sm-2 col-sm-2 control-label" style="width: 9%;">Phone</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add Contact</button>
+                                        <div class="col-md-12" style="border: 1px; border: #0a0b0b;     padding-top: 20px;">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label" style="width: 9%;">Address</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <button type="submit" class="btn btn-primary" style="margin-left: 28px; margin-top: 2%">Order</button>
                                     </form>
                                 </div>
                             </div>
