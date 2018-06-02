@@ -24,7 +24,7 @@ class DisplayJsonFood{
                     array(
                         'customer_id'=>$data['customer_id'],
                         'customer_Name'=>$data['customer_Name'],
-                        'customer_PhoneNo'=>$data['customer_PhoneNo'],
+                        'customer_PhoneNo'=>$data['customer_MobileNo'],
                         'customer_address'=>$data['customer_address'],
                         'customer_Entry_By'=>$data['user_Name'],
                         'customer_Input_Time'=>$data['customer_Input_Time']

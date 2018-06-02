@@ -11,9 +11,15 @@ class InsertDetails{
         $conn = $connection->getConnection();
         //array for json response
         $response = array();
-        $Name   = $_POST['name'];
-        $Mobile   = $_POST['mobile'];
-        $Address   = $_POST['address'];
+        $name  = $_POST['name'];
+        $companyName  = $_POST['companyName'];
+        $title   = $_POST['title'];
+        $email  = $_POST['email'];
+        $contactType   = $_POST['contactType'];
+        $mobile   = $_POST['mobile'];
+        $phone   = $_POST['phone'];
+        $address   = $_POST['address'];
+
         //getting user email via login session just to tract who is inserting data or updating data
         //getting user email via login session just to tract who is inserting data or updating data
         $Entry_By  =  $_SESSION['id'];
@@ -24,17 +30,22 @@ class InsertDetails{
         try{
             // echo $input_Time;
             //echo !empty($Name)." ".!empty($Cell_No)." ".isset($Point)." ".isset($Comission);
-            if(!empty($Name) && !empty($Mobile) && !empty($Address)){
 
-                $sqlInsert = "INSERT INTO customer (customer_id, customer_Name, customer_PhoneNo, customer_address,
- customer_Entry_By, customer_Input_Time) VALUES (0, '$Name', '$Mobile', '$Address', '$Entry_By', '$input_Time')";
+
+                $sqlInsert = "INSERT INTO customer (customer_id, customer_Name, customer_companyName
+, customer_title, customer_email, customer_contactType, customer_MobileNo, customer_PhoneNo, customer_address
+, customer_Entry_By, customer_Input_Time)
+  VALUES (0, '$name', '$companyName', '$title', '$email', '$contactType', '$mobile', '$phone'
+  , '$address', '$Entry_By', '$input_Time')";
                 $conn->exec($sqlInsert);
-            }
+                //echo $sqlInsert;
+
 
         }catch (PDOException $e){
             echo "Error while inserting ".$e->getMessage();
         }
         //cek is the row was inserted or not
+
         if($sqlInsert){
             //success inserted
             echo '<script type="text/javascript">alert("Successfully Inserted !!!");</script>';
@@ -43,7 +54,7 @@ class InsertDetails{
         }else{
 
             echo '<script type="text/javascript">alert("Error , Try Again!!!");</script>';
-            echo '<script type="text/javascript"> window.open("../Pages/Customer.php","_self");</script>';
+            //echo '<script type="text/javascript"> window.open("../Pages/Customer.php","_self");</script>';
             die();
         }
     }

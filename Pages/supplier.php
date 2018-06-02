@@ -29,45 +29,45 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="Addnew">
                                 <div class="content-panel">
-                                    <form method="post" role="form"  action="../Api/add_customer.php">
+                                    <form method="post" role="form"  action="../Api/add_supplier.php">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="name">Name</label>
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                                             </div>
 
 
                                             <div class="form-group col-md-6">
-                                                <label for="mobile">Title</label>
-                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="e.g. Owner, Stock Seller">
+                                                <label for="title">Title</label>
+                                                <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Owner, Stock Seller" required>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="address">Email</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Email">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
                                             </div>
                                             <div class="form-group col-md-6">
 
-                                                <label for="exampleFormControlTextarea1">Note</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <label for="email">Note</label>
+                                                <textarea class="form-control" id="note" name="note" rows="3" required></textarea>
 
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="address">Phone Number</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Phone number">
+                                                <label for="phone">Phone Number(Optional)</label>
+                                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="address">Mobile</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Mobile number">
+                                                <label for="mobile">Mobile</label>
+                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile number" required>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="address">Address</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required>
                                             </div>
                                             <div class="form-group col-md-6">
 
@@ -75,7 +75,7 @@
                                         </div>
 
 
-                                        <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add Contact</button>
+                                        <button type="submit" class="btn btn-primary" style=" margin-left:  1%;">Add Supplier</button>
                                     </form>
                                 </div>
                             </div>

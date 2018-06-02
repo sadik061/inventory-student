@@ -11,9 +11,13 @@ class InsertDetails{
         $conn = $connection->getConnection();
         //array for json response
         $response = array();
-        $Name   = $_POST['name'];
-        $Mobile   = $_POST['mobile'];
-        $Address   = $_POST['address'];
+        $name   = $_POST['name'];
+        $title  = $_POST['title'];
+        $email   = $_POST['email'];
+        $note   = $_POST['note'];
+        $phone   = $_POST['phone'];
+        $mobile  = $_POST['mobile'];
+        $address   = $_POST['address'];
         //getting user email via login session just to tract who is inserting data or updating data
         //getting user email via login session just to tract who is inserting data or updating data
         $Entry_By  =  $_SESSION['id'];
@@ -24,12 +28,13 @@ class InsertDetails{
         try{
             // echo $input_Time;
             //echo !empty($Name)." ".!empty($Cell_No)." ".isset($Point)." ".isset($Comission);
-            if(!empty($Name) && !empty($Mobile) && !empty($Address)){
 
-                $sqlInsert = "INSERT INTO supplier (supplier_id, supplier_Name, supplier_PhoneNo, supplier_address,
- supplier_Entry_By, supplier_Input_Time) VALUES (0, '$Name', '$Mobile', '$Address', '$Entry_By', '$input_Time')";
+
+                $sqlInsert = "INSERT INTO supplier (supplier_id, supplier_Name, supplier_Title, supplier_Email,
+ supplier_Note, supplier_PhoneNo, supplier_MobileNo, supplier_address, supplier_Entry_By, supplier_Input_Time) 
+ VALUES (0, '$name', '$title', '$email', '$note', '$phone', '$mobile', '$address', '$Entry_By', '$input_Time')";
                 $conn->exec($sqlInsert);
-            }
+
 
         }catch (PDOException $e){
             echo "Error while inserting ".$e->getMessage();
