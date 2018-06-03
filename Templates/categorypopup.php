@@ -95,7 +95,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 col-sm-3 control-label">Sub category</label>
                         <div class="col-sm-9">
-                            < <select id="inputState" class="form-control col-sm-2">
+                            <select id="inputState" class="form-control col-sm-2">
                                 <option selected>Choose...</option>
                                 <option>...</option>
                             </select>

@@ -45,55 +45,55 @@
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                                        <h4><i class="fa fa-angle-right"></i> purchased products</h4>
-                                        <section id="unseen">
-                                            <table class="table table-bordered table-striped table-condensed">
-                                                <thead>
-                                                <tr>
-                                                    <th>Item</th>
-                                                    <th>Category</th>
-                                                    <th>Brand</th>
-                                                    <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Price</th>
-                                                    <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Unit</th>
-                                                    <th class="numeric">Quantity</th>
-                                                    <th class="numeric">Discount</th>
-                                                    <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Total</th>
-                                                    <th class="numeric">Option</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td><input type="text" class="form-control col-md-4"></td>
-                                                    <td><select id="inputState" class="form-control col-sm-8">
-                                                            <option selected>Choose...</option>
-                                                            <option>...</option>
-                                                        </select></td>
-                                                    <td><select id="inputState" class="form-control col-sm-8">
-                                                            <option selected>Choose...</option>
-                                                            <option>...</option>
-                                                        </select></td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.17</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">Kg</td>
-                                                    <td class="numeric"><input type="text" class="form-control col-sm-4"></td>
-                                                    <td class="numeric"><input type="text" class="form-control col-sm-4"></td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.11</td>
-                                                    <td> <button>Add</button></td>
-                                                </tr>
+                            <h4><i class="fa fa-angle-right"></i> purchased products</h4>
+                            <section id="unseen">
+                                <table class="table table-bordered table-striped table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Category</th>
+                                        <th>Brand</th>
+                                        <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Price</th>
+                                        <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Unit</th>
+                                        <th class="numeric">Quantity</th>
+                                        <th class="numeric">Discount</th>
+                                        <th class="numeric"style="padding-left:  2%;padding-right: 4%;">Total</th>
+                                        <th class="numeric">Option</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control col-md-4"></td>
+                                        <td><select id="inputState" class="form-control col-sm-8">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select></td>
+                                        <td><select id="inputState" class="form-control col-sm-8">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select></td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.17</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">Kg</td>
+                                        <td class="numeric"><input type="text" class="form-control col-sm-4"></td>
+                                        <td class="numeric"><input type="text" class="form-control col-sm-4"></td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.11</td>
+                                        <td> <button>Add</button></td>
+                                    </tr>
 
-                                                <tr>
-                                                    <td>AGO</td>
-                                                    <td>ATLAS IRON LIMITED</td>
-                                                    <td>Asus</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.17</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">Kg</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">-0.02</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">-0.47%</td>
-                                                    <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.11</td>
-                                                    <td> <button>Edit</button></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </section>
+                                    <tr>
+                                        <td>AGO</td>
+                                        <td>ATLAS IRON LIMITED</td>
+                                        <td>Asus</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.17</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">Kg</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">-0.02</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">-0.47%</td>
+                                        <td class="numeric" style="padding-left:  2%;padding-right: 4%;">$3.11</td>
+                                        <td> <button>Edit</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </section>
 
                             <div class="form-group">
                                 <label class="col-sm-6 col-sm-6 control-label"></label>

@@ -42,7 +42,7 @@
                     <span>Purchase</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="blank.html">New Order</a></li>
+                    <li><a  href="PurchaseOrder.php">New Order</a></li>
                     <li><a  href="login.html">Invoices</a></li>
                     <li><a  href="lock_screen.html">Received</a></li>
                 </ul>
