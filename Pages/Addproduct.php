@@ -40,7 +40,17 @@
                                                 <option>...</option>
                                             </select>
                                         </div>
-                                        <button type="button" class="btn btn-outline-dark col-sm-2 col-sm-2">New</button>
+                                        <button type="button" class="btn btn-outline-dark col-sm-2 col-sm-2" data-toggle="modal" data-target="#Category">New</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">Sub-Category*</label>
+                                        <div class="col-sm-8">
+                                            <select id="inputState" class="form-control col-sm-8">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-dark col-sm-2 col-sm-2" data-toggle="modal" data-target="#subCategory">New</button>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">Brand*</label>
@@ -50,7 +60,7 @@
                                                 <option>...</option>
                                             </select>
                                         </div>
-                                        <button type="button" class="btn btn-outline-dark col-sm-2 col-sm-2">New</button>
+                                        <button type="button" class="btn btn-outline-dark col-sm-2 col-sm-2"data-toggle="modal" data-target="#Brand">New</button>
                                     </div>
 
                                 </div>
@@ -124,6 +134,7 @@
             </div><!-- /row -->
         </section>
     </section>
+    <?php include '../Templates/categorypopup.php' ?>
 
 </section>
 <?php include '../Templates/Footer.php' ?>

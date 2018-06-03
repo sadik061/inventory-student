@@ -5,7 +5,8 @@
     <?php include '../Templates/sidebar.php' ?>
     <section id="main-content">
         <section class="wrapper">
-
+            <div class="row mt">
+                <div class="col-md-12">
             <div class="content-panel">
                 <table class="table table-striped table-advance table-hover">
                     <h4><i class="fa fa-angle-right"></i> All Products</h4>
@@ -90,6 +91,8 @@
                     </tbody>
                 </table>
             </div><!-- /content-panel -->
+                </div>
+            </div>
 
         </section>
     </section>

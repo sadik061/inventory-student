@@ -2278,5 +2278,15 @@ ul.top-menu > li > a {
     margin-right: 26%;
 
 }
+.modal-header {
+    min-height: 51.428571px;
+    background: #424a5d;
+}
+.close{
+    color: #fff;
+}
+.modal-dialog {
+    width: 35%;
+}
 
 
