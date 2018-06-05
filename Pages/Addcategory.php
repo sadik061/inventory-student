@@ -277,6 +277,48 @@
                 }
             });
 
+            //on catagory option selected
+            $("#brand_main_catagory").change(function() {
+                var select = $("#brand_main_catagory option:selected").val();
+
+                $('#brand_sub_catagory')
+                    .empty()
+                    .append('<option selected>Choose...</option>');
+
+
+               // alert(select);
+                $.ajax({
+                    type: 'POST',
+                    url: '../Api/get_sub_catagory_by_catagory.php',
+                    async:false,
+                    data: {
+                        main_catagory:select
+                    },
+                    error: function (xhr, status) {
+                        alert(status);
+                    },
+                    success: function(data) {
+                        //when found names sending them in datalist for suggetions
+                        //alert(data);
+                        var obj = JSON.parse(data);
+
+                        var datas=obj.sub_catagory_data;
+
+                        //for sub catagory adding in brand
+                        for (var key in datas) {
+                            if (datas.hasOwnProperty(key)) {
+                                var option = document.createElement("option");
+                                option.text = datas[key].sub_catagory_Name;
+                                option.value=datas[key].sub_catagory_id;
+                                brand_sub_catagory.add(option);
+
+                            }
+                        }
+
+                    }
+                });
+            });
+
         });
 
     </script>
