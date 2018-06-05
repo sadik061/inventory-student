@@ -43,4 +43,37 @@ CREATE TABLE `customer` (
   PRIMARY KEY (customer_id),
   foreign key (customer_Entry_By) references user(user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `catagory` (
+  `catagory_id` int(11) NOT NULL AUTO_INCREMENT,
+  `catagory_Name` varchar(255) NOT NULL,
+  `catagory_Entry_By` int(11) NOT NULL,
+  `catagory_Input_Time` datetime DEFAULT NULL,
+  PRIMARY KEY (catagory_id),
+   foreign key (catagory_Entry_By) references user(user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `sub_catagory` (
+  `sub_catagory_id` int(11) NOT NULL AUTO_INCREMENT,
+  `catagory_id` int(11) NOT NULL ,
+  `sub_catagory_Name` varchar(255) NOT NULL,
+  `sub_catagory_Entry_By` int(11) NOT NULL,
+  `sub_catagory_Input_Time` datetime DEFAULT NULL,
+   PRIMARY KEY (sub_catagory_id),
+  foreign key (catagory_id) references catagory(catagory_id),
+     foreign key (sub_catagory_Entry_By) references user(user_id)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `brand` (
+  `brand_id` int(11) NOT NULL AUTO_INCREMENT,
+  `catagory_id` int(11) NOT NULL ,
+  `sub_catagory_id` int(11) NOT NULL,
+  `brand_Name` varchar(255) NOT NULL,
+  `brand_Entry_By` int(11) NOT NULL,
+  `brand_Input_Time` datetime DEFAULT NULL,
+  PRIMARY KEY (brand_id),
+   foreign key (catagory_id) references catagory(catagory_id),
+    foreign key (sub_catagory_id) references sub_catagory(sub_catagory_id),
+      foreign key (brand_Entry_By) references user(user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 

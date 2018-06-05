@@ -32,11 +32,11 @@
 
                                                 <h3>Main Category</h3>
                                                 <small>Please provide Name of the main category</small>
-                                                <form class="form-horizontal style-form" method="get">
+                                                <form class="form-horizontal style-form"  method="post" role="form"  action="../Api/add_catagory.php">
                                                     <div class="form-group">
                                                         <label class="col-sm-1 col-sm-2 control-label">Category</label>
                                                         <div class="col-sm-2">
-                                                            <input type="text" class="form-control" >
+                                                            <input id="main_catagory" name="main_catagory" type="text" class="form-control" >
                                                         </div>
                                                         <div class="col-sm-2">
                                                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -46,18 +46,18 @@
                                                 </form>
                                                 <h3>Sub-Category</h3>
                                                 <small>Choose main category and enter a sub-category</small>
-                                                    <form class="form-horizontal style-form" method="get">
+                                                    <form class="form-horizontal style-form"  method="post" role="form"  action="../Api/add_sub_catagory.php">
                                                     <div class="form-group">
                                                         <label class="col-sm-1 col-sm-2 control-label">Category</label>
                                                         <div class="col-sm-2">
-                                                            <select id="inputState" class="form-control col-sm-2">
+                                                            <select id="sub_main_catagory" name="sub_main_catagory" class="form-control col-sm-2">
                                                                 <option selected>Choose...</option>
-                                                                <option>...</option>
+
                                                             </select>
                                                         </div>
                                                         <label class="col-sm-1 col-sm-2 control-label" style="padding: .5%;">Sub-Category</label>
                                                         <div class="col-sm-2">
-                                                            <input type="text" class="form-control">
+                                                            <input id="sub_catagory" name="sub_catagory" type="text" class="form-control">
                                                         </div>
                                                         <div class="col-sm-2">
                                                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -66,25 +66,23 @@
                                                     </form>
                                                 <h3>Brand</h3>
                                                 <small>Choose main and sub category and enter a brand name</small>
-                                                        <form class="form-horizontal style-form" method="get">
+                                                        <form class="form-horizontal style-form"  method="post" role="form"  action="../Api/add_brand.php">
                                                     <div class="form-group">
                                                         <label class="col-sm-1 col-sm-2 control-label">Category</label>
                                                         <div class="col-sm-2">
-                                                            <select id="inputState" class="form-control col-sm-2">
+                                                            <select id="brand_main_catagory" name="brand_main_catagory" class="form-control col-sm-2">
                                                                 <option selected>Choose...</option>
-                                                                <option>...</option>
                                                             </select>
                                                         </div>
                                                         <label class="col-sm-1 col-sm-2 control-label" style="padding: .5%;">Sub-Category</label>
                                                         <div class="col-sm-2">
-                                                            <select id="inputState" class="form-control col-sm-2">
+                                                            <select id="brand_sub_catagory" name="brand_sub_catagory" class="form-control col-sm-2">
                                                                 <option selected>Choose...</option>
-                                                                <option>...</option>
                                                             </select>
                                                         </div>
                                                         <label class="col-sm-1 col-sm-2 control-label">Brand</label>
                                                         <div class="col-sm-2">
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" id="brand_name" name="brand_name" class="form-control">
                                                         </div>
                                                         <div class="col-sm-2">
                                                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -197,7 +195,91 @@
 
         </section><! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
+    <script>
 
+        $(document).ready(function() {
+
+            var sub_main_catagory = document.getElementById("sub_main_catagory");
+            var brand_main_catagory = document.getElementById("brand_main_catagory");
+            var brand_sub_catagory = document.getElementById("brand_sub_catagory");
+
+            //for adding main catagory in subcatagory and brand name
+           // alert("kh");
+            $.ajax({
+                type: 'POST',
+                url: '../Api/get_catagory.php',
+                async:false,
+                data: {
+                },
+                error: function (xhr, status) {
+                    alert(status);
+                },
+                success: function(data) {
+                    //when found names sending them in datalist for suggetions
+                    //alert(data);
+                    var obj = JSON.parse(data);
+
+                    var datas=obj.catagory_data;
+
+                    //for catagory adding in sub catagory
+                    for (var key in datas) {
+                        if (datas.hasOwnProperty(key)) {
+                            var option = document.createElement("option");
+                            option.text = datas[key].catagory_Name;
+                            option.value=datas[key].catagory_id;
+                            sub_main_catagory.add(option);
+
+
+                        }
+                    }
+                    //for catagory adding in brand
+                    for (var key in datas) {
+                        if (datas.hasOwnProperty(key)) {
+                            var option = document.createElement("option");
+                            option.text = datas[key].catagory_Name;
+                            option.value=datas[key].catagory_id;
+
+                            brand_main_catagory.add(option);
+
+                        }
+                    }
+
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: '../Api/get_sub_catagory.php',
+                async:false,
+                data: {
+                },
+                error: function (xhr, status) {
+                    alert(status);
+                },
+                success: function(data) {
+                    //when found names sending them in datalist for suggetions
+                    //alert(data);
+                    var obj = JSON.parse(data);
+
+                    var datas=obj.sub_catagory_data;
+
+                    //for sub catagory adding in brand
+                    for (var key in datas) {
+                        if (datas.hasOwnProperty(key)) {
+                            var option = document.createElement("option");
+                            option.text = datas[key].sub_catagory_Name;
+                            option.value=datas[key].sub_catagory_id;
+
+                            brand_sub_catagory.add(option);
+
+                        }
+                    }
+
+                }
+            });
+
+        });
+
+    </script>
 </section>
 <?php include '../Templates/Footer.php' ?>
     </body>

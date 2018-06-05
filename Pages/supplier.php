@@ -1,7 +1,6 @@
 <?php include '../Templates/Header.php'; ?>
 <body>
-<!-- for calling ajax to handle API -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <section id="container" >
     <?php include '../Templates/navbar.php' ?>
     <?php include '../Templates/sidebar.php' ?>
